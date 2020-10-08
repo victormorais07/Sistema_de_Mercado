@@ -11,7 +11,7 @@ import org.hibernate.Transaction;
 import br.com.mercado.hibernateUtil.HibernateUtil;
 
 public class GenericDaoImpl<T> implements GenericDao<T> {
-
+ 
 	
 	  private Session session = HibernateUtil.getSession();
 	  private Transaction tran = session.beginTransaction();
