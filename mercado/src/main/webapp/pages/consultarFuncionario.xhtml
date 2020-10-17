@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core"
+	template="/pages/basicTemplate.xhtml">
+	<ui:define name="content">
+
+
+
+
+
+<p:dataTable value="#{funcionarioMb.listaFuncionario}" var="fun" >
+<f:facet name="header"><h3>Funcionarios</h3></f:facet>
+<p:column headerText="Nome">
+  #{fun.nome}
+</p:column>
+
+<p:column headerText="Cpf">
+  #{fun.cpf}
+</p:column>
+<p:column headerText="Cidade">
+  #{fun.cidade}
+</p:column>
+<p:column headerText="Bairro">
+  #{fun.bairro}
+</p:column>
+
+<p:column headerText="Número/casa">
+  #{fun.numeroCasa}
+</p:column>
+
+<p:column headerText="Setor">
+  #{fun.departamento.departamento}
+</p:column>
+<p:column headerText="Função">
+  #{fun.departamento.funcao}
+</p:column>
+<p:column headerText="Salario">
+  #{fun.departamento.salario} R$
+</p:column>
+
+
+</p:dataTable>
+	</ui:define>
+
+
+
+</ui:composition>
+

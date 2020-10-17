@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" 
+	xmlns:f="http://java.sun.com/jsf/core">
+	
+	
+	<h:form>
+	
+	<h:panelGrid columns="2" border="0" cellpadding="10" cellspacing="0"  style="font-size:13px; width:700px; border:1px black solid  "  >
+	
+	<p:outputLabel value="Nome" />
+	<p:inputText placeholder="Digite o nomê do cliente" value="#{clienteMb.cliente.nome}"/>
+	<p:outputLabel value="Cpf"/>
+	<p:inputText placeholder="Digite o cpf" value="#{clienteMb.cliente.cpf}"/>
+	<p:outputLabel value="Cidade" />
+	<p:inputText value="#{clienteMb.cliente.cidade}"/>
+	<p:outputLabel value="Bairro" />
+	<p:inputText value="#{clienteMb.cliente.bairro}"/>
+	<p:outputLabel value="Nº"/>
+	<p:inputText placeholder="Número da casa" value="#{clienteMb.cliente.numeroCasa}"/>
+	<p:commandButton value="Salvar" action="#{clienteMb.cadastrar()}" update="@form"/>
+	
+	
+	
+	</h:panelGrid>
+	
+	
+	</h:form>
+	
+	
+	</ui:composition>
+

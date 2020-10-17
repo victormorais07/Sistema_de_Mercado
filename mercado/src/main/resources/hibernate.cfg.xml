@@ -14,7 +14,8 @@
 		
 		<mapping class="br.com.mercado.entidade.Produto" />
 		<mapping class="br.com.mercado.entidade.Cliente" />
-
+		<mapping class="br.com.mercado.entidade.Funcionario" />
+		<mapping class="br.com.mercado.entidade.Departamento" />
 
 
 	</session-factory>

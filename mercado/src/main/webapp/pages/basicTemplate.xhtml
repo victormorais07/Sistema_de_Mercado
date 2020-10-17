@@ -1,18 +1,68 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
+
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:p="http://primefaces.org/ui" 
 	xmlns:f="http://java.sun.com/jsf/core">
 <h:head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Insert title here</title>
+	<title>Mercado</title>
+	  <link rel="stylesheet" type="text/css" href="#{request.contextPath}/resources/css/style.css"/>
 </h:head>
 <h:body>
+  <header>
+  
+  
+  <div style="margin-top: 60px;margin-left:10px;position:absolute;">
+ <a href="index.xhtml" >
+  <h:graphicImage url="/img/home.png" width="30"  />
+  </a>
+  </div>
+<div id="titulo" style="position:absolute;margin-left:50%;margin-top:10px"> 
+<h:graphicImage url="/img/logo.png" width="100" />
+</div>
+ 
+ 
+ 
+
+
   
 
-	
+
+
+     </header>
+
+    <nav id="menu">
+    
+   <h:form>
+  
+    <p:panelMenu style="width:200px">
+        <p:submenu label="Cadastrar">
+            <p:menuitem value="Cliente" url="cadastroCliente.xhtml"  icon="pi pi-save" />
+            <p:menuitem value="Produto"   icon="pi pi-refresh" />
+            <p:menuitem value="Funcionario" url="funcionario.xhtml"   ajax="false" icon="pi pi-times"/>
+        </p:submenu>
+        <p:submenu label="Consultar">
+            <p:menuitem value="Cliente"  url="consultarCliente.xhtml"  ajax="false" icon="pi pi-times"/>
+            <p:menuitem value="Produto"   ajax="false" icon="pi pi-times"/>
+            <p:menuitem value="Funcionario"  url="consultarFuncionario.xhtml"  ajax="false" icon="pi pi-times"/>
+        </p:submenu>
+    </p:panelMenu>
+   </h:form>
+    
+    </nav> 
+    
+     <section>
+        
+        
+        <ui:insert name="principal"></ui:insert>
+     <ui:insert name="content"></ui:insert>
+     </section>
+     
+     <footer> &copy;Victor Morais </footer>
+
 </h:body>
 
 </html>
